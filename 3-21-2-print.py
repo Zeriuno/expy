@@ -1,1 +1,2 @@
-print('YO Pycharm')
+a = 'LO'
+print('YO' + a + "!!")
