@@ -1,5 +1,9 @@
 
 def listePrenom(t):
+    """
+    :param t: string used as the file name
+    :return: nothing
+    """
     prenom = "o"
     prenom = input("Saisir un prénom (\"exit\" pour quitter) : ")
     f = open(t, "w", encoding="utf-8")
@@ -8,7 +12,11 @@ def listePrenom(t):
         prenom = input("Saisir un prénom (\"exit\" pour quitter) : ")
     f.close()
 
-def lisFichier(t):
+def lisFichier(t = texte.txt): #on a ainsi précisé un paramètre par défaut
+    """
+    Function opens file :param t:, read and print it to the end, then closes it.
+    :return: no return
+    """
     f = open(t)
     print(f.read())
     f.close()
