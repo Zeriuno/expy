@@ -14,7 +14,9 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Send message back to client
-        message = "<!DOCTYPE html><html><head><title>Lyrics</title></head><h1>The Sound of Silence</h1><body><p>Hello Darkness</p></body></html>"
+        fichier = open("4-25-3-index.html")
+        message = fichier.read()
+        fichier.close()
 
         # Write content as utf-8 data
         self.wfile.write(bytes(message, "utf8"))
