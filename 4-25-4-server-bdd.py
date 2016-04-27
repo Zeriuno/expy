@@ -17,18 +17,18 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         # Send message back to client
-        headerHTML = open("header.html")
-        footerHTML = open("footer.html")
+        headerHTML = open("4-25-5-header.html")
+        footerHTML = open("4-25-6-footer.html")
         message = headerHTML.read()
         message += '<h1>TITRE</h1>'
 
         db = pymysql.connect(host='localhost',
                              #port=3306,
-                             #user='mimo',
-                             #password='Z65mimo2016_',
-                             database='mimo')
+                             user='python',
+                             password='onyva',
+                             database='python1')
         cur = db.cursor(pymysql.cursors.DictCursor)
-        cur.execute("SELECT item FROM liste")
+        cur.execute("SELECT item FROM exo20160425")
         message += "<ul>"
         for row in cur:
             message += "<li>" + row['item'] + "</li>"
