@@ -1,5 +1,6 @@
-a = 4
+a = 6
+b = 'LO'
 if ( a > 5):
-    print("YO")
+    print('''YO'''+b)
 else:
-    print("LO")
+    print('''SO'''+b)
