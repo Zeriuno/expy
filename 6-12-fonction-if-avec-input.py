@@ -1,5 +1,5 @@
 a=input('''Saisir un chiffre: ''')
-
+a = int(a)
 def yolo(a):
     """
     :param a: integer submitted by the user
@@ -12,6 +12,6 @@ d = (''':'(''')
 if(a > 1):
     print('''YO'''+b+c)
 else:
-    print('''SO'''+b+d)
+    print('''SO'''+b,d)
 
 yolo(a)
