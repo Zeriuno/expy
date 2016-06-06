@@ -6,4 +6,4 @@ soup = BeautifulSoup(open("6-12-1-source.html"))
 links = soup.find_all('a')
 
 for link in links:
-    print(link)
+    print(link.get('href'))
